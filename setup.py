@@ -10,7 +10,7 @@ base = None
 if sys.platform == "win32":
     base = "Win32GUI"
 
-setup(  name = "USBSafe",
-        version = "0.1",
+setup(  name = "SafeUSB",
+        version = "1.0",
         options = {"build_exe": build_exe_options},
-        executables = [Executable("USBSafe.py", base=base)])
+        executables = [Executable("SafeUSB.py", base=base)])
