@@ -44,9 +44,6 @@ class CreateFolder():
         
         # Everyone read only
         dacl.AddAccessAllowedAce (win32security.ACL_REVISION, con.GENERIC_READ, self.everyone)  
-
-        #This user will have full access
-        dacl.AddAccessAllowedAce (win32security.ACL_REVISION, con.FILE_ALL_ACCESS, self.user) 
         
         sd.SetSecurityDescriptorDacl (1, dacl, 0)
         win32security.SetFileSecurity (self.path, win32security.DACL_SECURITY_INFORMATION, sd)
